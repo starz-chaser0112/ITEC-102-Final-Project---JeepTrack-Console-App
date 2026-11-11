@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JeepTrack Console App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7c2af4ce526ed4144fac6e01d90cee35433e20c")]
 [assembly: System.Reflection.AssemblyProductAttribute("JeepTrack Console App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JeepTrack Console App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

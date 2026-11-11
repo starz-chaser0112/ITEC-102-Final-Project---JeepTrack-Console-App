@@ -12,3 +12,4 @@ C:\Users\TRISHALYN\Downloads\ITEC 102 Final Project - JeepTrack\src\JeepTrack Co
 C:\Users\TRISHALYN\Downloads\ITEC 102 Final Project - JeepTrack\src\JeepTrack Console App\obj\Debug\net10.0\JeepTrack Console App.pdb
 C:\Users\TRISHALYN\Downloads\ITEC 102 Final Project - JeepTrack\src\JeepTrack Console App\obj\Debug\net10.0\JeepTrack Console App.genruntimeconfig.cache
 C:\Users\TRISHALYN\Downloads\ITEC 102 Final Project - JeepTrack\src\JeepTrack Console App\obj\Debug\net10.0\ref\JeepTrack Console App.dll
+C:\Users\TRISHALYN\Downloads\ITEC 102 Final Project - JeepTrack\src\JeepTrack Console App\obj\Debug\net10.0\JeepTrack Console App.sourcelink.json
