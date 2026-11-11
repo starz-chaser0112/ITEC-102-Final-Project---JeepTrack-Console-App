@@ -1,38 +1,37 @@
 ﻿using System;
 class Jeeptrack
 {
-    static void Main()
+    // Methods
+
+    // Welcoming Message
+    static void WelcomeMessage()
     {
-        // Methods
+        Console.WriteLine("===================== Welcome to JeepTrack! =====================");
+    }
 
-        // Welcoming Message
-        static void WelcomeMessage()
-        {
-            Console.WriteLine("===================== Welcome to JeepTrack! =====================");
-        }
+    // Available Locations
+    static void DisplayLocations()
+    {
+        Console.WriteLine("                 ----- Available Locations -----\n");
+        Console.WriteLine("> San Pablo City \t\t\t > SM San Pablo");
+        Console.WriteLine("> LSPU-San Pablo City Campus \t\t > Liliw");
+        Console.WriteLine("> Nagcarlan \t\t\t\t > Tiaong");
+        Console.WriteLine("> Calauan \t\t\t\t > Los Banos");
+        Console.WriteLine("> Sta Cruz");
+    }
 
-        // Available Locations
-        static void DisplayLocations()
-        {
-            Console.WriteLine("                 ----- Available Locations -----\n");
-            Console.WriteLine("> San Pablo City \t\t\t > SM San Pablo");
-            Console.WriteLine("> LSPU-San Pablo City Campus \t\t > Liliw");
-            Console.WriteLine("> Nagcarlan \t\t\t\t > Tiaong");
-            Console.WriteLine("> Calauan \t\t\t\t > Los Banos");
-            Console.WriteLine("> Sta Cruz");
-        }
-
-        // Passenger Type
-        static void PassengerTypes()
-        {
-            Console.WriteLine("                 ----- Passenger Type -----\n");
-            Console.WriteLine("> Regular \t\t\t\t > Student");
-            Console.WriteLine("> PWD \t\t\t\t\t > Senior Citizen");
-            Console.WriteLine();
-        }
+    // Passenger Type
+    static void PassengerTypes()
+    {
+        Console.WriteLine("                 ----- Passenger Type -----\n");
+        Console.WriteLine("> Regular \t\t\t\t > Student");
+        Console.WriteLine("> PWD \t\t\t\t\t > Senior Citizen");
+        Console.WriteLine();
+    }
 
         // Main Program
-
+    static void Main()
+    {
         // Display Welcome Message
         WelcomeMessage();
         
@@ -120,68 +119,68 @@ class Jeeptrack
         // Validating Route
         string routes = currentLocation + ("-") + destination;
         float travelDistance = 0f;
-        int timeTravel = 0;
+        int travelTime = 0;
 
         switch (routes)
         {
             case "SAN PABLO CITY-SM SAN PABLO":
             case "SM SAN PABLO-SAN PABLO CITY":
                 travelDistance = 2.9f;
-                timeTravel = 9;
+                travelTime = 9;
             break;
 
             case "SAN PABLO CITY-LSPU-SAN PABLO CITY CAMPUS":
             case "LSPU-SAN PABLO CITY CAMPUS-SAN PABLO CITY":
                 travelDistance = 2.9f;
-                timeTravel = 11;
+                travelTime = 11;
             break;
 
             case "SAN PABLO CITY-LILIW":
             case "LILIW-SAN PABLO CITY":
                 travelDistance = 19.8f;
-                timeTravel = 46;
+                travelTime = 46;
             break;
 
             case "SAN PABLO CITY-NAGCARLAN":
             case "NAGCARLAN-SAN PABLO CITY":
                 travelDistance = 15.8f;
-                timeTravel = 37;
+                travelTime = 37;
             break;
 
             case "SAN PABLO CITY-TIAONG":
             case "TIAONG-SAN PABLO CITY":
                 travelDistance = 13.1f;
-                timeTravel = 24;
+                travelTime = 24;
             break;
 
             case "LSPU-SAN PABLO CITY CAMPUS-CALAUAN":
             case "CALAUAN-LSPU-SAN PABLO CITY CAMPUS":
                 travelDistance = 8.3f;
-                timeTravel = 15;
+                travelTime = 15;
             break;
 
             case "LSPU-SAN PABLO CITY CAMPUS-LOS BANOS":
             case "LOS BANOS-LSPU-SAN PABLO CITY CAMPUS":
                 travelDistance = 20.7f;
-                timeTravel = 40;
+                travelTime = 40;
             break;
 
             case "SAN PABLO CITY-STA CRUZ":
             case "STA CRUZ-SAN PABLO CITY":
                 travelDistance= 30.0f;
-                timeTravel = 60;
+                travelTime = 60;
             break;
 
             case "NAGCARLAN-LILIW":
             case "LILIW-NAGCARLAN":
                 travelDistance= 3.2f;
-                timeTravel = 9;
+                travelTime = 9;
             break;
 
             case "NAGCARLAN-STA CRUZ":
             case "STA CRUZ-NAGCARLAN":
                 travelDistance = 17;
-                timeTravel = 38;
+                travelTime = 38;
             break;
 
             default:
@@ -194,13 +193,6 @@ class Jeeptrack
         // Passenger Type
         string[] passengerTypes = {"REGULAR", "SENIOR CITIZEN", "PWD", "STUDENT"};
         string passengerType = " ";
-
-        float initialDistance = 4.00f;
-        float initialRate = 14.00f;
-        float succeedingRate = 2.00f;
-        float finalFare = 0f;
-        float discount = 0.20f;
-        float discountedFare = 0f;
 
         while (true)
         {
@@ -223,23 +215,31 @@ class Jeeptrack
             {
                 break;
             }
-                Console.WriteLine("Invalid passenger type. Please enter a valid type.");
-
-            // Fare Calculation
-
+                Console.WriteLine("\t     ----- INVALID PASSENGER TYPE! -----");
+                Console.WriteLine();
             
         }
 
+        // Fare Calculation
+
+        float initialDistance = 4.00f;
+        float initialRate = 14.00f;
+        float succeedingRate = 2.00f;
+        float finalFare;
+        float discount = 0.20f;
+        float discountedFare;
         float fare = (travelDistance - initialDistance) * succeedingRate + initialRate;
-                if (passengerType == "REGULAR")
-                {
-                    discount = 0;
-                    finalFare = fare;
-                }
-                else {
-                    discountedFare = fare * discount;
-                    finalFare = fare - discountedFare;
-                } 
+
+        if (passengerType == "REGULAR")
+        {
+            discount = 0;
+            finalFare = fare;
+        }
+        else 
+        {
+            discountedFare = fare * discount;
+            finalFare = fare - discountedFare;
+        } 
 
         // Travel Information
         Console.WriteLine();
@@ -247,7 +247,7 @@ class Jeeptrack
         Console.WriteLine("\t\t\t----- ROUTE -----");
         Console.WriteLine($"[ {currentLocation} > {destination} ]");
         Console.WriteLine($"DISTANCE \t\t\t\t\t EST TRAVEL TIME");
-        Console.WriteLine($"> {travelDistance:F2} km < \t\t\t\t\t > {timeTravel} minutes <");
+        Console.WriteLine($"> {travelDistance:F2} km < \t\t\t\t\t > {travelTime} minutes <");
         Console.WriteLine("_________________________________________________________________");
         Console.WriteLine("\t\t    ----- PASSENGER TYPE -----");    
         Console.WriteLine($"PASSENGER TYPE \t\t\t\t\t DISCOUNT");                            
@@ -255,6 +255,6 @@ class Jeeptrack
         Console.WriteLine("_________________________________________________________________");
         Console.WriteLine("\t\t\t----- FARE -----");
         Console.WriteLine($"BOUND TO: {currentLocation} > {destination}\nFARE AMOUNT: ₱ {finalFare:F2}");
-        Console.WriteLine("===================== Have a Safe Journey! ======================");
+        Console.WriteLine("===================== HAVE A SAFE TRAVEL! =======================");
     }
 }
