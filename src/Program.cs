@@ -97,6 +97,7 @@ class Jeeptrack
             if(destination == currentLocation)
                 {
                     Console.WriteLine("----- DESTINATION AND CURRENT LOCATION MUST BE DIFFERENT! -----");
+                    Console.WriteLine();
                     continue;
                 }
 
