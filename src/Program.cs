@@ -94,6 +94,12 @@ class Jeeptrack
 
             bool locationFound = false;
 
+            if(destination == currentLocation)
+                {
+                    Console.WriteLine("----- DESTINATION AND CURRENT LOCATION MUST BE DIFFERENT! -----");
+                    continue;
+                }
+
             for(int i = 0; i < locations.Length; i++)
             {
                 if(destination == locations[i])
@@ -228,20 +234,27 @@ class Jeeptrack
         float succeedingRate = 2.00f;
         float discount = 0.20f;
         float fare;
-        float discountedFare;
         float finalFare;
 
-        fare = (travelDistance - initialDistance) * succeedingRate + initialRate;
+        if (travelDistance <= initialDistance)
+        {
+            fare = initialRate;
+        }
+
+        else
+        {
+            fare = (travelDistance - initialDistance) * succeedingRate + initialRate;
+        }
 
         if (passengerType == "REGULAR")
         {
             discount = 0;
             finalFare = fare;
         }
+
         else 
         {
-            discountedFare = fare * discount;
-            finalFare = fare - discountedFare;
+            finalFare = fare - (fare * discount);
         } 
 
         // Travel Information
