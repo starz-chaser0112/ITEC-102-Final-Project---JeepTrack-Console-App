@@ -36,8 +36,8 @@ class Jeeptrack
         WelcomeMessage();
         
             string[] locations = {"SAN PABLO CITY", "SM SAN PABLO", "LSPU-SAN PABLO CITY CAMPUS", "LILIW", "NAGCARLAN", "TIAONG", "CALAUAN", "LOS BANOS", "STA CRUZ"};
-            string currentLocation = " ";
-            string destination = " ";
+            string currentLocation;
+            string destination;
         // Current Location 
         
 
@@ -118,8 +118,8 @@ class Jeeptrack
         
         // Validating Route
         string routes = currentLocation + ("-") + destination;
-        float travelDistance = 0f;
-        int travelTime = 0;
+        float travelDistance;
+        int travelTime;
 
         switch (routes)
         {
@@ -192,11 +192,12 @@ class Jeeptrack
 
         // Passenger Type
         string[] passengerTypes = {"REGULAR", "SENIOR CITIZEN", "PWD", "STUDENT"};
-        string passengerType = " ";
+        string passengerType;
 
         while (true)
         {
             PassengerTypes();
+            
             Console.Write("Enter passenger type: ");
             passengerType = Console.ReadLine().ToUpper();
 
@@ -225,9 +226,9 @@ class Jeeptrack
         float initialDistance = 4.00f;
         float initialRate = 14.00f;
         float succeedingRate = 2.00f;
-        float finalFare;
         float discount = 0.20f;
         float discountedFare;
+        float finalFare;
         float fare = (travelDistance - initialDistance) * succeedingRate + initialRate;
 
         if (passengerType == "REGULAR")
