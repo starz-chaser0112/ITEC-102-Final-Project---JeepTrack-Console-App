@@ -197,7 +197,7 @@ class Jeeptrack
         while (true)
         {
             PassengerTypes();
-            
+
             Console.Write("Enter passenger type: ");
             passengerType = Console.ReadLine().ToUpper();
 
@@ -227,9 +227,11 @@ class Jeeptrack
         float initialRate = 14.00f;
         float succeedingRate = 2.00f;
         float discount = 0.20f;
+        float fare;
         float discountedFare;
         float finalFare;
-        float fare = (travelDistance - initialDistance) * succeedingRate + initialRate;
+
+        fare = (travelDistance - initialDistance) * succeedingRate + initialRate;
 
         if (passengerType == "REGULAR")
         {
@@ -248,7 +250,7 @@ class Jeeptrack
         Console.WriteLine("\t\t\t----- ROUTE -----");
         Console.WriteLine($"[ {currentLocation} > {destination} ]");
         Console.WriteLine($"DISTANCE \t\t\t\t\t EST TRAVEL TIME");
-        Console.WriteLine($"> {travelDistance:F2} km < \t\t\t\t\t > {travelTime} minutes <");
+        Console.WriteLine($"> {travelDistance:F1} km < \t\t\t\t\t > {travelTime} minutes <");
         Console.WriteLine("_________________________________________________________________");
         Console.WriteLine("\t\t    ----- PASSENGER TYPE -----");    
         Console.WriteLine($"PASSENGER TYPE \t\t\t\t\t DISCOUNT");                            
