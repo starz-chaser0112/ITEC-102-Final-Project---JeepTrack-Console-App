@@ -50,7 +50,7 @@ class Jeeptrack
             
             // Input Current Location
             Console.Write("Enter your current location (enter \"exit\" to quit): ");
-            currentLocation = Console.ReadLine().ToUpper();
+            currentLocation = Console.ReadLine()?? "".ToUpper();
             Console.WriteLine();
 
             // Location Validation
@@ -87,7 +87,7 @@ class Jeeptrack
 
             // Input Destination
             Console.Write("Enter your destination (enter \"exit\" to quit): ");
-            destination = Console.ReadLine().ToUpper();
+            destination = Console.ReadLine()?? "".ToUpper();
             Console.WriteLine();
 
             // Location Validation
@@ -194,7 +194,6 @@ class Jeeptrack
                 Console.WriteLine("\t\t ----- ROUTE NOT FOUND! -----");
                 Console.WriteLine();
                 return;
-            break;
         }
 
         // Passenger Type
@@ -206,7 +205,7 @@ class Jeeptrack
             PassengerTypes();
 
             Console.Write("Enter passenger type: ");
-            passengerType = Console.ReadLine().ToUpper();
+            passengerType = Console.ReadLine()?? "".ToUpper();
 
             bool validPassenger = false; 
 
