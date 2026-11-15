@@ -1,5 +1,5 @@
 # JeepTrack
-### Jeepney Fare Guide for Commuters
+## Jeepney Fare Guide for Commuters
 
 ## DESCRIPTION
 JeepTrack is a console-based application that aims to provide the estimated fare price for commuters who uses traditional jeepneys as transportation. Furthermore, it also includes the route details based on their current location and desired destination consisting of estimated travel time and distance. It also allows you to identify yourself to check for possible discount eligibility if you're a students, senior citizen or person with disaabilities.
@@ -26,8 +26,9 @@ JeepTrack is a console-based application that aims to provide the estimated fare
 ## COMPILING AND RUNNING THE PROGRAM
 **Prerequisite**
 - Visual Studio Code or any integrated development environment compatible with C#
-- Install .NET SDK  
-**Visual Studio Code**
+- Install .NET SDK
+  
+**Compiling and Running**
 1. Download or clone the repository
 2. Open project folder in Visual Studio Code
 3. Open new integrated terminal
