@@ -120,11 +120,12 @@ class Jeeptrack
             {
                 break;
             }              
-            Console.WriteLine("/t/t/t ----- LOCATION NOT FOUND! -----");
+            Console.WriteLine("\t\t ----- LOCATION NOT FOUND! -----");
+            Console.WriteLine();
         }
         
         // Validating Route
-        string routes = currentLocation + ("-") + destination;
+        string routes = currentLocation + "-" + destination;
         float travelDistance;
         int travelTime;
 
@@ -222,6 +223,7 @@ class Jeeptrack
             {
                 break;
             }
+                Console.WriteLine();
                 Console.WriteLine("\t     ----- INVALID PASSENGER TYPE! -----");
                 Console.WriteLine();
             
